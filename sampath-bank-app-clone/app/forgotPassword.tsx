@@ -1,42 +1,45 @@
 import CustomButton from "@/assets/components/button";
 import { Link } from "@react-navigation/native";
-import {
-  Alert,
-  Image,
-  ProgressBarAndroid,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { Alert, Image, StyleSheet, Text, TextInput, View } from "react-native";
 
-const Login = () => {
+const Register = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.languageText}>English</Text>
       <Image source={require("@/assets/images/logo.png")} style={styles.logo} />
-      <Text style={styles.logoText}>Welcome to Sampath Vishwa</Text>
+      <Text style={styles.logoText}>Reset Password</Text>
+      <Text
+        style={{
+          color: "gray",
+          marginBottom: 20,
+          marginRight: 10,
+          marginLeft: 10,
+          textAlign: "center",
+        }}
+      >
+        Please follow the next steps reset your Sampath Vishwa account password
+      </Text>
       <View style={styles.textContainer}>
-        <TextInput style={styles.input} placeholder="Username" />
-        <TextInput style={styles.input} placeholder="Password" />
+        <TextInput style={styles.input} placeholder="Enter Username" />
       </View>
 
       <View style={styles.btnContainer}>
         <CustomButton
-          title="Log in"
+          title="Next"
           onPress={() => {
-            Alert.alert("Login", "Login button pressed");
+            Alert.alert("Next", "Next button pressed");
           }}
           width={170}
           height={45}
           color="#f6812a"
         />
-
-        <Link to="/forgotPassword" style={{ marginTop: 20 }}>
-          <Text style={{ color: "gray" }}>Forgot Password?</Text>
-        </Link>
-        <Link to="/register" style={{ marginTop: 20 }}>
-          <Text style={{ color: "black", fontSize: 18 }}>Create Account</Text>
+        <Link to="/register" style={{ marginTop: 80 }}>
+          <Text style={{ color: "black", fontSize: 14 }}>
+            Need Support?{"       "}
+            <Text style={{ color: "#f6812a", fontSize: 16, fontWeight: "600" }}>
+              Contact Us
+            </Text>
+          </Text>
         </Link>
       </View>
 
@@ -98,4 +101,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Register;
