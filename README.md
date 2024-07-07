@@ -38,3 +38,6 @@ The development of this project is tracked with commits made page-wise to ensure
 
 2. **Login Screen:**
    - ![Login Screen](screenshots/login-screen.png)
+
+3. **Forgot Password Screen:**
+   - ![Forgot Password Screen](screenshots/forgot-password-screen.png)
