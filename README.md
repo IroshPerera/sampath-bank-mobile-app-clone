@@ -14,7 +14,7 @@ This project is a clone of the Sampath Bank mobile app, developed using React Na
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone https://github.com/IroshPerera/sampath-bank-mobile-app-clone.git
    ```
 2. Navigate to the project directory:
    ```bash
