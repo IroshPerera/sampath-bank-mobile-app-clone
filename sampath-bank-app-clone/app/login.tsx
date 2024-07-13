@@ -1,5 +1,6 @@
 import CustomButton from "@/assets/components/button";
 import { Link } from "@react-navigation/native";
+import { router } from "expo-router";
 import {
   Alert,
   Image,
@@ -22,16 +23,15 @@ const Login = () => {
       </View>
 
       <View style={styles.btnContainer}>
-        <CustomButton
-          title="Log in"
-          onPress={() => {
-            Alert.alert("Login", "Login button pressed");
-          }}
-          width={170}
-          height={45}
-          color="#f6812a"
-        />
-
+       
+          <CustomButton
+            title="Log in"
+            onPress={() => {router.push("(tab)")}}
+            width={170}
+            height={45}
+            color="#f6812a"
+          />
+      
         <Link to="/forgotPassword" style={{ marginTop: 20 }}>
           <Text style={{ color: "gray" }}>Forgot Password?</Text>
         </Link>
