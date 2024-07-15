@@ -41,3 +41,9 @@ The development of this project is tracked with commits made page-wise to ensure
 
 3. **Forgot Password Screen:**
    - ![Forgot Password Screen](screenshots/forgot-password-screen.png)
+
+4. **Dashboard Screen: 01**
+   - ![Dashboard Screen](screenshots/dashboard_screen_01.jpeg)
+
+5. **Dashboard Screen: 02**
+   - ![Dashboard Screen](screenshots/dashboard_screen_02.jpeg)
