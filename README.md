@@ -47,3 +47,15 @@ The development of this project is tracked with commits made page-wise to ensure
 
 5. **Dashboard Screen: 02**
    - ![Dashboard Screen](screenshots/dashboard_screen_02.jpeg)
+
+6. **Send/Pay Option Screen 01**
+   - ![Send/Pay Option](screenshots/send_pay_option.jpeg)
+
+7. **Send Money  Option Screen 01**
+   - ![Send Money Screen](screenshots/send_money_screen_01.jpeg)
+
+8. **Send Money Option Screen 02**
+   - ![Send Money Option](screenshots/send_money_screen_02.jpeg)
+
+9. **Send Money Option Screen 03**
+   - ![Send Money Option](screenshots/send_money_screen_03.jpeg)
