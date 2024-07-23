@@ -6,12 +6,12 @@ export default function back() {
 
   useEffect(() => {
     router.back()
+    router.push('(tab)')
   }
   , [])
 
   return (
     <View>
-      <Text>back</Text>
     </View>
   )
 }
