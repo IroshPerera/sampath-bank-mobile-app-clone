@@ -24,7 +24,7 @@ export default function TabLayout() {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
-            backgroundColor: "#042146",
+            backgroundColor: "#193a51",
             borderRadius: 15,
             margin: 10,
             height: 70,

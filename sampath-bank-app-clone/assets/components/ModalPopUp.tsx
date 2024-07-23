@@ -1,4 +1,5 @@
 // ModalPopup.js
+import { router } from 'expo-router';
 import React from 'react';
 import { Modal, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
@@ -16,7 +17,8 @@ const ModalPopup = ({ visible, onClose }:any) => {
           <TouchableOpacity style={styles.button} onPress={() => {
             onClose();
             // Handle "Send" action
-            alert('Send action triggered');
+            router.navigate('(home)/');
+            
           }}>
             <Text style={styles.buttonText}>Send</Text>
           </TouchableOpacity>
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
   button: {
     marginVertical: 10,
     padding: 15,
-    backgroundColor: '#042146',
+    backgroundColor: '#193a51',
     borderRadius: 5,
     width: '100%',
     alignItems: 'center',
