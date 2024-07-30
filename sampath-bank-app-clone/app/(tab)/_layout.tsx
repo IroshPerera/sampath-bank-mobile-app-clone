@@ -1,9 +1,9 @@
-import { Tabs } from "expo-router";
+import { router, Tabs } from "expo-router";
 import React, { useState } from "react";
 import { useColorScheme } from "@/hooks/useColorScheme.web";
 import { TabBarIcon } from "@/assets/components/navigation/TabBarIcon";
 import CustomTabButton from "@/assets/components/CustomTabButton";
-import { Alert, View } from "react-native";
+import { Alert, TouchableOpacity, View, StyleSheet } from "react-native";
 import ModalPopup from "@/assets/components/ModalPopUp";
 
 export default function TabLayout() {
@@ -23,30 +23,24 @@ export default function TabLayout() {
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
-          tabBarStyle: {
-            backgroundColor: "#193a51",
-            borderRadius: 15,
-            margin: 10,
-            height: 70,
-          },
-          tabBarItemStyle: {
-            borderRadius: 15,
-            margin: 10,
-            height: 50,
-            width: 50,
-          },
+          tabBarStyle: styles.tabBarStyle,
         }}
         initialRouteName="index"
       >
         <Tabs.Screen
           name="recent"
           options={{
-            tabBarIcon: ({ color, focused }) => (
-              <TabBarIcon name="document" color="white" />
+            tabBarButton: (props) => (
+              <View style={styles.leftTab}>
+                <TouchableOpacity
+                  {...props}
+                  onPress={() => router.push("(recent)")} // Replace 'targetRoute' with the desired route name
+                  style={styles.tabButton}
+                >
+                  <TabBarIcon name="document" color="white" />
+                </TouchableOpacity>
+              </View>
             ),
-            tabBarItemStyle: {
-              marginLeft: 0,
-            },
           }}
         />
 
@@ -54,11 +48,15 @@ export default function TabLayout() {
           name="button"
           options={{
             tabBarButton: (props) => (
-              <CustomTabButton
-                {...props}
-                onPress={handleButtonPress}
-                title="Send | Pay"
-              />
+              <View style={styles.middleTab}>
+                <TouchableOpacity>
+                  <CustomTabButton
+                    {...props}
+                    onPress={handleButtonPress}
+                    title="Send | Pay"
+                  />
+                </TouchableOpacity>
+              </View>
             ),
           }}
         />
@@ -66,12 +64,17 @@ export default function TabLayout() {
         <Tabs.Screen
           name="navigation"
           options={{
-            tabBarIcon: ({ color, focused }) => (
-              <TabBarIcon name="filter" color="white" />
+            tabBarButton: (props) => (
+              <View style={styles.rightTab}>
+                <TouchableOpacity
+                  {...props}
+                  onPress={() => router.push("(settings)")} // Replace 'targetRoute' with the desired route name
+                  style={styles.tabButton}
+                >
+                  <TabBarIcon name="filter" color="white" />
+                </TouchableOpacity>
+              </View>
             ),
-            tabBarItemStyle: {
-              marginLeft: 0,
-            },
           }}
         />
 
@@ -87,3 +90,35 @@ export default function TabLayout() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  tabBarStyle: {
+    backgroundColor: "#193a51",
+    borderRadius: 15,
+    margin: 10,
+    height: 70,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  tabButton: {
+    borderRadius: 15,
+    margin: 20,
+    height: 50,
+    width: 50,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  leftTab: {
+    flex: 1,
+    alignItems: "flex-start",
+  },
+  middleTab: {
+    flex: 1,
+    alignItems: "center",
+  },
+  rightTab: {
+    flex: 1,
+    alignItems: "flex-end",
+  },
+});
