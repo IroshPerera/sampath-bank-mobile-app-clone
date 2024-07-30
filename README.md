@@ -59,3 +59,9 @@ The development of this project is tracked with commits made page-wise to ensure
 
 9. **Send Money Option Screen 03**
    - ![Send Money Option](screenshots/send_money_screen_03.jpeg)
+
+10. **Recent Transaction History Screen**
+    - ![Send Money Option](screenshots/recent_screen.jpeg)
+
+11. **Side Nav Bar Screen**
+      - ![Send Money Option](screenshots/side_nav_bar_screen.jpeg)
